@@ -1,20 +1,19 @@
-# ethernet: Notes to support a Cat-5/Cat-6 wiring project  
-Home 'Cat-5' RJ45 Cable Wiring Notes  
+# ethernet: Notes to support a Home Cat-5/Cat-6 wiring project  
 
 ## RJ45 ethernet connection pinouts:  
 
-Connect your computer to your router or your switch using a straight-through cable. I have read that EIA/TIA T568B is the most popular standard used for straight-through LAN cables.  
+Connect your computer to your router or your switch using a straight-through cable. I have read that ANSI/TIA T568B is the most popular standard used for straight-through LAN cables, which aligns with my experience at work.  
 
-There are two main standards for attaching connectors onto *[Cat-5](https://en.wikipedia.org/wiki/Category_5_cable) [RJ45](https://en.wikipedia.org/wiki/Modular_connector#8P8C) cable wiring*: EIA/TIA 568A and EIA/TIA 568B. Both are correct. In the context of straight-through cables, use either of the [EIA/TIA 568](https://en.wikipedia.org/wiki/ANSI/TIA-568) A or B standards consistently throughout any given installation. *Note, you may see what most of us know as RJ45 jacks called "[8P8C modular connectors](https://en.wikipedia.org/wiki/Modular_connector#Standardization)," which is used in many formal standards* and may be more 'correct' than the more generic RJ45.  As far as I know, both names describe the same product, and I will continue using the term RJ45.  
+There are two main standards for attaching connectors onto *[Cat-5](https://en.wikipedia.org/wiki/Category_5_cable) [RJ45](https://en.wikipedia.org/wiki/Modular_connector#8P8C) cable wiring*: ANSI/TIA 568A and ANSI/TIA 568B. Both are correct. In the context of straight-through cables, use either of the [ANSI/TIA 568](https://en.wikipedia.org/wiki/ANSI/TIA-568) A or B standards consistently throughout any given installation. *Note, you may see what most of us know as RJ45 jacks called "[8P8C modular connectors](https://en.wikipedia.org/wiki/Modular_connector#Standardization)," which is used in many formal standards* and may be more 'correct' than the more generic RJ45.  As far as I know, both names describe the same product, and I will continue using the term RJ45.  
 
-*Cat-5 RJ45 Ethernet cabling* has 8 color coded wires. In the EIA/TIA 568 A or B specifications, they are twisted into 4 pairs of wires. For any given RJ45 connector, a given cable pair is used for pins 1 and 2; another for pins 3 and 6, another for pins 4 and 5, and another for pins 7 and 8.  The difference between EIA/TIA 568A and EIA/TIA 568B standards is that they specify the colors to use for each of those pairs.  
+*Cat-5 RJ45 Ethernet cabling* has 8 color coded wires. In the ANSI/TIA 568 A or B specifications, they are twisted into 4 pairs of wires. For any given RJ45 connector, a given cable pair is used for pins 1 and 2; another for pins 3 and 6, another for pins 4 and 5, and another for pins 7 and 8.  The difference between ANSI/TIA 568A and ANSI/TIA 568B standards is that they specify the colors to use for each of those pairs.  
 
 Here is an illustration of a straight-through Ethernet cable:
 <a href="https://www.makeuseof.com/cat-5e-wiring-diagram/"><img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2023/05/03-image-showing-the-pinout-diagram-of-a-straight-through-ethernet-cable.jpg"></a>  
 From: <a href="https://www.makeuseof.com/cat-5e-wiring-diagram/" target="_blank" rel="noopener noreferrer">"Cabling Your Home Network? Here’s a Helpful Cat 5e Wiring Diagram" 
 By Arjun Vishnu, 2023-06-03</a>  
 
-Using the same EIA/TIA 568B color scheme, here is an illustration of how the Ethernet communicating pairs are numbered:  
+Using the same ANSI/TIA 568B color scheme, here is an illustration of how the Ethernet communicating pairs are numbered:  
 <a href="https://github.com/mccright/rand-notes/blob/master/Cat-5-cable-diagram.md"><img src="images/ethernet-rj45-pairs.png"></a><br />  
 The key, though, is to crimp your RJ45 connector onto your *Cat-5* cable with the colored wires in the correct relationship with the others.  At higher speeds/throughputs, you may also need to add [shields/hoods/strain-relief](https://assets.rs-online.com/f_auto,q_auto,c_scale,w_400/70641364.jpg) to your cable ends as well.  
   
@@ -25,7 +24,7 @@ See a basic demonstration on How to Terminate Ethernet Cables: https://www.youtu
 See a demonstration using RJ45 Pass Through Connectors: https://www.youtube.com/watch?v=NWhoJp8UQpo  
 
 
-### EIA/TIA 568-A Ethernet UTP cable wiring diagram  
+### ANSI/TIA 568-A Ethernet UTP cable wiring diagram  
 
 |Pin |Signal |Description |Wire color |Pin |
 |:--:|:-----:|:----------:|:---------:|:--:|
@@ -39,7 +38,7 @@ See a demonstration using RJ45 Pass Through Connectors: https://www.youtube.com/
 | 8 |BI- pair 4 |Bi-directional- |Brown with white stripe or solid brown |8 |
 
 
-### EIA/TIA 568-B Ethernet UTP cable wiring diagram  
+### ANSI/TIA 568-B Ethernet UTP cable wiring diagram  
 
 |Pin |Signal |Description |Wire color |Pin |
 |:--:|:-----:|:----------:|:---------:|:--:|
@@ -63,3 +62,5 @@ In a home Ethernet implementation there are some other issues that may matter a 
 
 ### Caution about Copper Clad Aluminum (CCA) Cables  
 There is some writing about legal actions related to the use of Copper Clad Aluminum (CCA) cables.  Based on my reading, I believe that your Ethernet cabling should be manufactured of 100% copper conductors if reliability is your highest priority.  There appear to be options that are constructed with aluminum, steel, or other less expensive metal.  At 100MB or multi-GB throughputs you will be exercising the full *Cat-5/Cat-6* specification, so to me it seems like an unreasonable risk to use them.  See Fluke's application note "[Copper Clad Aluminum (CCA) Cables](https://www.flukenetworks.com/content/application-note-copper-clad-aluminum-cables)." for more information on this topic.  
+
+You might see references to EIA/TIA 568A or B standards.  Consider that the same as ANSI/TIA 568A or B standards.  The EIA (Electronic Industries Alliance; until 1997 Electronic Industries Association) [ceased operations on February 11, 2011](https://en.wikipedia.org/wiki/Electronic_Industries_Alliance).  Some of its standards still circulate widely, and for the purposes of home Ethernet cable terminations, EIA/TIA 568 and ANSI/TIA 568 remain equivalent.  
